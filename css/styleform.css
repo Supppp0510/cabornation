@@ -1,0 +1,161 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Latar belakang */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎬 Video Background */
+.bg-video-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none; /* biar klik tembus */
+  filter: brightness(0.6); /* biar video agak gelap */
+}
+
+/* 🌫️ Overlay tambahan (opsional untuk kontras lebih) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.90);
+  z-index: 1;
+}
+
+/* Overlay hitam biar teks jelas */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 0;
+}
+
+/* Container Form */
+.form-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(27, 27, 27, 0.9);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  width: 200%;
+  max-width: 600px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: fadeIn 1.2s ease; /* ✨ Animasi waktu load */
+}
+
+/* Judul */
+.form-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffc93c;
+}
+
+.subtitle {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* Input */
+.form-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.form-group input::placeholder {
+  color: #bbb;
+}
+
+/* Tombol daftar */
+.btn-main {
+  background: #ffc93c;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn-main:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Link login */
+.login-text {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.login-text a {
+  color: #ffc93c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+.login-text p {
+  color: #fff;
+}
+
+/* ✨ Animasi Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 2rem 1.5rem;
+  }
+}

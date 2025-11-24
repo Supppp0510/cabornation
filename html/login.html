@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Cabornation</title>
+  <link rel="stylesheet" href="../css/stylelogin.css" />
+</head>
+<body>
+
+  <!-- 🎬 Video Background -->
+  <video autoplay muted loop playsinline class="bg-video-login">
+    <source src="../assets/JOIN THE NEW ERA  2023 VCT LOCK__IN  Cinematic Trailer - VALORANT (1080p, h264).mp4" type="video/mp4" />
+    Browser kamu tidak mendukung video HTML5.
+  </video>
+
+  <!-- 🌫️ Overlay -->
+  <div class="overlay"></div>
+
+  <!-- 🧱 Container Login -->
+  <div class="login-container">
+    <h1>Selamat Datang Kembali!</h1>
+    <p class="subtitle">Masuk untuk mengelola turnamen dan timmu</p>
+
+<form action="../php/login.php" method="POST" class="login-form">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Masukkan email kamu" required>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Kata Sandi</label>
+    <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required>
+  </div>
+
+  <button type="submit" class="btn-main">Masuk</button>
+</form>
+
+
+
+    <div class="register-text">
+      <p>Belum punya akun? <a href="daftar.html">Daftar Sekarang</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

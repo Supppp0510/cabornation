@@ -1,0 +1,310 @@
+/* ============ GLOBAL RESET ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #121212, #181818);
+    color: #fff;
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #000, #1b1b1b);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    position: fixed;
+    height: 100%;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 1rem 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu .active a {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ============ CONTENT ============ */
+.content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Judul Tim Saya di atas form */
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #ffc93c;
+    text-align: center;
+}
+
+.content h3 { /* Style untuk Daftar Pemain */
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color : #fff;
+}
+
+/* ============ FORM ============ */
+form {
+    background: #111;
+    padding: 40px 50px;
+    border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #f5f5f5;
+    font-size: 15px;
+}
+
+/* === INPUT & SELECT === */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Saat aktif atau diketik */
+input:focus,
+select:focus {
+    border-color: #ffc93c;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Saat readonly */
+input[readonly],
+select[disabled] {
+    background-color: #191919;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* ============ BUTTONS ============ */
+.btn-submit {
+    background: #ffc93c;
+    border: none;
+    padding: 14px 22px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Tombol Tambah Pemain di bawah form */
+.content a.btn-submit {
+    width: auto;
+    min-width: 220px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* ============ NOTIFICATION BOX ============ */
+.notif {
+    background: #d1f7c4;
+    color: #2e7d32;
+    border-left: 6px solid #43a047;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    max-width: 700px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* ============ READONLY MODE ============ */
+.readonly input,
+.readonly select {
+    background: #191919 !important; /* Gunakan !important untuk mengatasi konflik */
+    color: #ccc !important;
+    pointer-events: none;
+}
+
+/* ============ LOGO OVERLAY STYLES ============ */
+.logo-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+.logo-preview-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffc93c;
+    display: block;
+}
+.logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white; 
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: default;
+    transition: opacity 0.3s;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.logo-container.editable:hover .logo-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+.logo-input {
+    display: none;
+}
+
+/* ============ PLAYER CARDS & SECTION ============ 
+* CATATAN: Styling detail player card (grid 3/4/5 kolom, warna dinamis, dll.)
+* sudah diatur di CSS inline di timsaya.php untuk menghindari konflik 
+* dan memanfaatkan data PHP. Hanya atur max-width di sini.
+*/
+.content .player-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: flex-start; 
+    width: 100%;
+    max-width: 700px; /* Batasi lebar container utama */
+    padding: 0 10px;
+}
+
+
+/* ============ MODAL STYLES ============ */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+    background-color: #111;
+    margin: 5% auto; 
+    padding: 25px;
+    border-radius: 12px;
+    width: 80%; 
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+}
+.close-btn:hover, .close-btn:focus {
+    color: #fff;
+    cursor: pointer;
+}
+.modal .form-group {
+    margin-bottom: 15px;
+}
+.player-photo-preview { 
+    width:50px; 
+    height:50px; 
+    border-radius:50%; 
+    object-fit:cover; 
+    margin-top:10px;
+}
+
+/* === REVISI WARNA TEKS UNGGAH FOTO (Sesuai Permintaan) === */
+.custom-file-upload {
+    color :#000 !important;
+}
