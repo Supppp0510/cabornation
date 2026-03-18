@@ -73,12 +73,3 @@ Pastikan tiga file berikut ada di direktori `eventorganizers/` untuk mendukung f
 1.  Pindahkan semua file proyek ke folder `htdocs` XAMPP Anda.
 2.  Akses aplikasi melalui browser: `http://localhost/cabornation/`
 
----
-
-## 👥 Kontributor Project
-
-* **[Supppp0510](https://github.com/Supppp0510)** — *Front End Developer*
-* **[RinaDwi076](https://github.com/RinaDwi076)** — *UI/UX & Documentation*
-* **[DhifaBarata](https://github.com/DhifaBarata)** — *Core Backend*
-
----
