@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
 }
 
-/* ==== SIDEBAR ==== */
+
 .sidebar {
   width: 250px;
   background: linear-gradient(180deg, #000000, #1b1b1b);
@@ -58,14 +58,14 @@ body {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* ==== MAIN CONTENT ==== */
+
 .content {
   margin-left: 250px;
   flex-grow: 1;
   padding: 2rem 3rem;
 }
 
-/* ==== TOPBAR ==== */
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -93,7 +93,7 @@ body {
   border: 2px solid #000000;
 }
 
-/* ==== STATS ==== */
+
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -125,7 +125,7 @@ body {
   color: #555;
 }
 
-/* ==== NEWS SECTION ==== */
+
 .news-section {
   background: #fff;
   padding: 2rem;
@@ -179,7 +179,7 @@ body {
   line-height: 1.5;
 }
 
-/* ==== RESPONSIVE ==== */
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;
